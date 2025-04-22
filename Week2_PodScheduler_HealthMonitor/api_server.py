@@ -110,3 +110,9 @@ def create_pod():
     if isinstance(pod_id, dict):
         return jsonify(pod_id), 400
     return jsonify({'pod_id': pod_id, 'message': 'Pod scheduled successfully'})
+
+if __name__ == '__main__':
+    logger.info("Starting API server...")
+    threading.Thread(target=HealthMonitor.check_health, daemon=True).start()
+    logger.info("Health monitoring thread started")
+    app.run(host='0.0.0.0', port=5000, debug=True)
