@@ -1,0 +1,15 @@
+# Week3_NodeList_Testing/templates/index.html
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Node Status</title>
+</head>
+<body>
+    <h1>Registered Nodes</h1>
+    <ul>
+        {% for node in nodes %}
+        <li>{{ node }} - Last heartbeat: {{ nodes[node]['last_heartbeat'] }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
