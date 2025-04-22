@@ -1,0 +1,4 @@
+# Week1_NodeManager_API/requirements.txt
+flask
+
+---
