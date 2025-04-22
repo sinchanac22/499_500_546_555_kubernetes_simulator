@@ -84,3 +84,6 @@ class NodeManager:
                 return {'error': str(e)}
         logger.error(f"Node not found: {node_id}")
         return {'error': 'Node not found'}
+
+if __name__ == '__main__':
+    logger.info("Starting API server...")
